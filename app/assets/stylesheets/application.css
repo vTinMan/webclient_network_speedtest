@@ -1,0 +1,12 @@
+/*
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+  font-family: sans-serif
+}
+
+dd, dt {
+  margin-bottom: 5px;
+}
