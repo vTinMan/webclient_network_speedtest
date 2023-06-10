@@ -1,0 +1,41 @@
+.hide {
+  display: none;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 7px;
+  padding: 10px;
+  background: #ddd;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #eee;
+}
+
+.btn-primary {
+  background: #06d;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #07e;
+}
+
+.btn-primary[disabled] {
+  background: #bcd;
+  color: gray;
+}
+
+#speedtest-execution {
+  font-family: monospace
+}
+
+#toggle-execution ~ .execution-text {
+  display: none;
+}
+
+#toggle-execution:checked ~ .execution-text {
+  display: block;
+}

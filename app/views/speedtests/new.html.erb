@@ -1,0 +1,36 @@
+<h1>Network speed test</h1>
+<%= hidden_field_tag :speedtest_download_url, speedtest_path %>
+<%= hidden_field_tag :speedtest_upload_url, speedtest_path %>
+<%= hidden_field_tag :speedtest_storage_url, @file_url %>
+
+<%= form_with class: 'speedtest-weight-form' %>
+<div class="control-group">
+  <div id="speedtest-runner" class="btn btn-primary">Run</div>
+</div>
+<div id="speedtest-results" class="hide">
+  <dl class="dl-horizontal">
+    <dt>User IP</dt>
+    <dd><%= request.remote_ip %></dd>
+    <h3>Results</h3>
+    <dt>Download speed</dt>
+    <dd>
+      <span class="speedtest-download-speed"></span>
+      <span class="speedtest-download-speed-error text-error hide">request error</span>
+    </dd>
+    <dt>Upload speed</dt>
+    <dd>
+      <span class="speedtest-upload-speed"></span>
+      <span class="speedtest-upload-speed-error text-error hide">request error</span>
+    </dd>
+    <dt>Storage download speed</dt>
+    <dd>
+      <span class="speedtest-image-storage-speed"></span>
+      <span class="speedtest-image-storage-speed-error text-error hide">request error</span>
+    </dd>
+  </dl>
+</div>
+<div id="speedtest-execution">
+  <input id="toggle-execution" type="checkbox" class="hide">
+  <label class="showing-execution btn-link" for="showing-execution"></label>
+  <div class="execution-text"></div>
+</div>
